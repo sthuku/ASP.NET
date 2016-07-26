@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+    <style type="text/css">
+        .auto-style5
+        {
+            width: 227px;
+        }
+        .auto-style4
+        {
+            color: #660033;
+        }
+        .auto-style6
+        {
+            width: 541px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id ="logo">
+        <table>
+            <tr>
+           <td> <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/logo.png" /></td>
+        
+            <td class="auto-style2"><p style="width: 489px;font-size:2em;"> <span class="auto-style4">We wish you a Safe Journey</span></p></td>
+        <td class="auto-style3">
+            <section id ="login" runat ="server">
+                <div id ="signOutTab" runat="server">
+                  <table >
+            <tr>
+                <td>
+                    <asp:Button ID="signOutButton" runat="server" Text="Sign Out" OnClick="signOutButton_Click" SkinID="buttonz" />
+                </td>
+            </tr>
+        </table>
+                    </div>
+                <div id ="loginTab" runat ="server">
+            <table >
+                <tr>
+                    <td class="auto-style5">
+                        &nbsp;<asp:TextBox ID="userNameTextBox" placeholder="user name" runat="server" SkinID="textBoxz"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        &nbsp;<asp:TextBox ID="passwordTextBox" placeholder="password" runat="server" TextMode="Password" SkinID="textBoxz"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style5">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="logInButton" runat="server" Text="Log in" OnClick="logInButton_Click" CausesValidation="False" SkinID="buttonz" /></td></tr>
+                <tr>
+                    <td class="auto-style5">
+                        &nbsp;<asp:Label ID="loginErrorLabel" runat="server" SkinID="labelz"></asp:Label>
+                    </td>
+                </tr>
+                </table>
+                    </div>
+                </section>
+            </td>
+                </tr>
+            </table>
+        
+    </div>
+
+
+    <div id ="body">
+        <section id="menu">
+            <asp:Menu ID="leftSideMenu" runat="server" ForeColor="White" DataSourceID="SiteMapDataSource1">
+                
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Home.aspx" Text="Home" Value="Home" ></asp:MenuItem>
+                </Items>
+                  <Items >
+                      <asp:MenuItem Text="&nbsp;" Value="s1" ></asp:MenuItem>
+                  </Items> 
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/rentACar.aspx" Text="Rent a Car" Value="Rent a Car"></asp:MenuItem></Items>
+                <Items >
+                      <asp:MenuItem Text="&nbsp;" Value="s2" ></asp:MenuItem>
+                  </Items> 
+                    <Items><asp:MenuItem NavigateUrl="~/shareARide.aspx" Text="Share a Ride" Value="Share a Ride"></asp:MenuItem></Items>
+                <Items >
+                      <asp:MenuItem Text="&nbsp;" Value="s3" ></asp:MenuItem>
+                  </Items> 
+                    <Items><asp:MenuItem NavigateUrl="~/getADriver.aspx" Text="Get a Driver" Value="Get a Driver"></asp:MenuItem></Items>
+                <Items >
+                      <asp:MenuItem Text="&nbsp;" Value="s4" ></asp:MenuItem>
+                  </Items> 
+                 
+                    <Items><asp:MenuItem NavigateUrl="~/contact.aspx" Text="Contact" Value="Contact"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle ForeColor="#FF3300" />
+            </asp:Menu>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+        </section>
+        <section id ="content">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+             </asp:ContentPlaceHolder>
+        </section>
+        
+    </div>
+        <div id="Footer">
+            <table style="width: 100%;">
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="auto-style6">&nbsp;</td>
+                    <td><asp:SiteMapPath ID="SiteMapPath1" runat="server" ForeColor="#000066">
+                        <NodeStyle ForeColor="#000066" />
+                        </asp:SiteMapPath></td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

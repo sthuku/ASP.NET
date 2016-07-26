@@ -1,0 +1,73 @@
+﻿body {
+    font-family: Tahoma, Geneva, sans-serif;
+    background: url(Background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  margin-bottom: 20px;
+}
+
+#logo
+{
+    margin:-10px;
+    border: rgba(0,0,0,0.5) 1px;
+    background-color: rgba(0,0,0,0.5);
+    color: black;
+    padding: 15px;
+
+   
+}
+
+#login
+{
+    float: right;
+}
+
+
+#body
+{
+    
+    display:inline;
+    
+}
+
+#menu
+{
+    margin-left:10px;
+    float:left;
+    margin-top:50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+   padding:25px;
+   padding-right:-30px;
+   border-radius:4px;
+    width: 200px;
+    height:100px;
+}
+
+
+
+#content
+{
+    float:left;
+    margin-top: 50px;
+    margin-left:160px;
+    border: rgba(0,0,0,0.5) 1px;
+    background-color: rgba(0,0,0,0.5);
+    border-radius:4px;
+    padding:20px;
+}
+
+.aTag
+{
+    color: red;
+    text-decoration:none;
+}
+
+.aTag:hover
+{
+    color: white;
+}
+
